@@ -5,6 +5,7 @@
 import timeit
 from functools import lru_cache
 
+
 if __name__ == '__main__':
     def fib(n):
         if n == 0 or n == 1:
