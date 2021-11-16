@@ -5,36 +5,35 @@
 import timeit
 from functools import lru_cache
 
+def fib(n):
+    if n == 0 or n == 1:
+        return n
+    else:
+        return fib(n - 2) + fib(n - 1)
+
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+@lru_cache
+def fibOpt(n):
+    if n == 0 or n == 1:
+        return n
+    else:
+        return fib(n - 2) + fib(n - 1)
+
+@lru_cache
+def factorialOpt(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
 
 if __name__ == '__main__':
-    def fib(n):
-        if n == 0 or n == 1:
-            return n
-        else:
-            return fib(n - 2) + fib(n - 1)
-
-
-    def factorial(n):
-        if n == 0:
-            return 1
-        else:
-            return n * factorial(n - 1)
-
-    @lru_cache
-    def fibOpt(n):
-        if n == 0 or n == 1:
-            return n
-        else:
-            return fib(n - 2) + fib(n - 1)
-
-    @lru_cache
-    def factorialOpt(n):
-        if n == 0:
-            return 1
-        else:
-            return n * factorial(n - 1)
-
-
     start_time = timeit.default_timer()
 
     temp = factorial(800)
