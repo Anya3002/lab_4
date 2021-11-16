@@ -36,22 +36,22 @@ def factorialOpt(n):
 if __name__ == '__main__':
     start_time = timeit.default_timer()
 
-    temp = factorial(800)
+    temp = factorial(200)
     print("Факториал без оптимизации выполняется за", timeit.default_timer() - start_time, "секунд")
 
     start_time = timeit.default_timer()
 
-    temp = factorialOpt(800)
+    temp = factorialOpt(200)
 
     print("Факториал с оптимизацией выполняется за", timeit.default_timer() - start_time, "секунд")
 
     start_time = timeit.default_timer()
 
-    print(fib(25))
+    print(fib(50))
     print("Фиббоначи без оптимизации выполняется за", timeit.default_timer() - start_time, "секунд")
 
     start_time = timeit.default_timer()
 
-    print(fibOpt(25))
+    print(fibOpt(50))
     print("Фиббоначи с оптимизацией выполняется за", timeit.default_timer() - start_time, "секунд")
 
